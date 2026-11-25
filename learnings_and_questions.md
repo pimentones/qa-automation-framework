@@ -47,3 +47,8 @@ SEARCH_BOX = dt("search-query") # class attribute: one copy, shared by every Hom
         self.driver = driver            # instance attribute: each HomePage has its own
 
 Two HomePage objects share the same SEARCH_BOX locator, which is fine because locators never change. Each one drives its own browser. self is how a method knows which object it was called on. The classic trap is a mutable class attribute, such as a list: it's shared by every instance, so one object changing it changes it for all of them.
+
+8. clean up inputs at the boundary
+   the idea is to clean up inputs where they occur and where the config reads the envinroment, in this case in the config file, so that any erros like typos don't impact the framework later on when running.
+
+9.
