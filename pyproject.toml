@@ -1,0 +1,11 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+log_level = "INFO"
+markers = [
+    "unit: fast tests of the framework code itself, no network",
+    "api: REST API tests against Practice Software Testing API",
+    "e2e: Selenium browser tests against Practice Software Testing",
+    "smoke: small critical-path subset",
+]
